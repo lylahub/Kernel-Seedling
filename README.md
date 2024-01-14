@@ -1,8 +1,10 @@
 # A Kernel Seedling
-Create a /proc/count file that shows the current number of running processes (or tasks) running.
-Make /proc/count return a integer with the number of running processes(or tasks) when you cat /proc/count
+This project creates a `/proc/count` file in the Linux kernel that displays the current number of running processes (or tasks).
+The module allows `/proc/count` to return an integer representing the number of running processes when you use the command `cat /proc/count`.
 
 ## Building
+To build the module, use the following command:
+
 ```shell
 make
 ```
@@ -13,7 +15,7 @@ TODO: cmd for running binary
 sudo insmod proc_count.ko
 cat /proc/count
 ```
-TODO: results?
+TODO: results
 cat /proc/count          
 183
 
@@ -27,12 +29,12 @@ sudo rmmod proc_count
 ```python
 python -m unittest
 ```
-TODO: results? 
 ...
 ----------------------------------------------------------------------
 Ran 3 tests in 2.761s
 
 OK
+
 
 
 Report which kernel release version you tested your module on
