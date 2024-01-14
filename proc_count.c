@@ -6,15 +6,17 @@
 
 static struct proc_dir_entry *entry;
 
-// name, mode, parent, show
-// functino to generate data for the /proc file
-// create a virtual file with proc_count as our show function
-// remove the virtual file
 static int proc_count(struct seq_file *m, void *v){
-	// TODO: it's all yours
 	// count the # process on your computer that is running rn
-	seq_printf(m, "TEXT")
-	return 0;
+	int count = 0;
+
+    struct task_struct *task;
+    for_each_process(task) {
+		count++;
+    }
+
+    seq_printf(m, "%d\n", count);
+    return 0;
 }
 
 static int __init proc_count_init(void)
