@@ -4,37 +4,37 @@ The module allows `/proc/count` to return an integer representing the number of 
 
 ## Building
 To build the module, use the following command:
-
 ```shell
 make
 ```
 
 ## Running
 ```shell
-TODO: cmd for running binary
 sudo insmod proc_count.ko
 cat /proc/count
 ```
-TODO: results
+The result is an integer representing the number of running processes
+
+Sample Result: 
 cat /proc/count          
 183
 
 ## Cleaning Up
 ```shell
-TODO: cmd for cleaning the built binary
 sudo rmmod proc_count
+make clean
 ```
 
 ## Testing
 ```python
 python -m unittest
 ```
+Sample result:
 ...
 ----------------------------------------------------------------------
 Ran 3 tests in 2.761s
 
 OK
-
 
 
 Report which kernel release version you tested your module on
@@ -44,9 +44,9 @@ It should match release numbers as seen on https://www.kernel.org/.
 ```shell
 uname -r -s -v
 ```
-TODO: kernel ver? Answer this question!# Kernel-Seedling
 uname -r
 5.14.8-arch1-1
+
 
 uname -r -s -v
 Linux 5.14.8-arch1-1 #1 SMP PREEMPT Sun, 26 Sep 2021 19:36:15 +0000
