@@ -47,11 +47,13 @@ It should match release numbers as seen on https://www.kernel.org/.
 ```shell
 uname -r -s -v
 ```
-uname -r -s -v
+Sample result:
 Linux 5.14.8-arch1-1 #1 SMP PREEMPT Sun, 26 Sep 2021 19:36:15 +0000
 
-
-modinfo proc_count.ko    
+```shell
+modinfo proc_count.ko
+```
+Sample result:
 filename:       /home/cs111/Downloads/lab0/proc_count.ko
 license:        GPL
 description:    CS111 lab0 count proc number
