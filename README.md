@@ -29,12 +29,15 @@ make clean
 ```python
 python -m unittest
 ```
+
 Sample result:
+```
 ...
 ----------------------------------------------------------------------
 Ran 3 tests in 2.761s
 
 OK
+```
 
 
 Report which kernel release version you tested your module on
@@ -44,10 +47,6 @@ It should match release numbers as seen on https://www.kernel.org/.
 ```shell
 uname -r -s -v
 ```
-uname -r
-5.14.8-arch1-1
-
-
 uname -r -s -v
 Linux 5.14.8-arch1-1 #1 SMP PREEMPT Sun, 26 Sep 2021 19:36:15 +0000
 
